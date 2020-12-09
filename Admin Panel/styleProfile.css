@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #78cccf;
+  font-family: 'Poppins' sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* Start SideBar */
+a:hover {
+  color: white;
+  text-decoration: none;
+} 
+
+#sidebar-wrapper {
+  /* z-index specifies the stack order of an element */
+  z-index: 1000;
+  height: 100%;
+  width: 0;
+  left: -50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #222e3c;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+  width: 8px;
+  background: #5a5f64;
+}
+
+#sidebar-wrapper::-webkit-scrollbar-thumb {
+  background-color:#989898;
+  border-radius:10px;
+}
+
+.sidebar-brand {
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 1.15rem 1.5rem;
+  display: block;
+  color: #f8f9fa;
+}
+
+.sidebar-header {
+  text-transform: capitalize;
+  padding: 1.5rem 1.5rem .375rem !important;
+  font-size: 14px;
+  color: #ced4da;
+  /* color: black; */
+}
+ 
+/* Navbar */
+.navbar-nav li a ,.submenu-box ul li a {
+  color: gray !important;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 10px 10px 10px 20px !important;
+  display: block;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins' sans-serif;
+  letter-spacing: 2px;
+}
+
+.navbar-nav li a.active{
+  color: #e9ecef!important;
+  background: linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.0875) 50%,transparent);
+  border-left:4px solid #3b7ddd;
+}
+
+.navbar-nav .has-sub > a:after {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  color: gray;
+  display: block;
+  content: "\f077";
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 30px;
+  margin-top: -15px;
+}
+
+#wrapper.toggled {
+  padding-left: 270px;
+}
+
+.toggled#sidebar-wrapper {
+  width: 230px !important;
+  height: 100%;
+  left: 0px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+}
+
+.navbar-nav li {
+  display: block !important;
+  margin: 2px 0x;
+}
+
+.nav-item .nav-link {
+  display: block;
+  color: white !important;
+  text-transform: capitalize;
+  /* text-decoration = decoration for fonts of the element */
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: 0.4s ease;
+}
+
+.navbar-nav > li > a i:before {
+  margin: 0px 5px 0px 0px;
+  font-size: 14px;
+}
+/* End Sidebar */
+
+/* Main content */
+
+#page-content-wrapper {
+  width: 100%;
+  transition:all 0.5s ease;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -270px;
+  transition: all 0.5s ease;
+}
+
+.toggled#page-content-wrapper {
+  margin-left: 230px;
+  transition: all 0.5s ease;
+}
+
+@media only screen and(min-width: 992px) {
+  /* From JS */
+  .toggled#page-content-wrapper {
+    width: calc(100% - 270px);
+  }
+}
+/* End Main content */
+
+/* Start Left Cross bar animation */
+
+.nav-icon1 {
+  z-index: 999;
+  position: relative;
+  display: block;
+  width: 23px;
+  margin: 0px 30px 0px 25px;
+  cursor: pointer;
+  height: 25px;
+}
+
+.nav-icon1 span {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background-color: #5d5d5d;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+/* specifies same property for every nav-icon1 element that is numberth nav-icon1 element of its parent */
+
+.nav-icon1 span:nth-of-type(1) {
+  top: 0px;
+}
+
+.nav-icon1:hover span:nth-of-type(1) {
+  top: -3px;
+}
+
+.nav-icon1.open span:nth-of-type(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.nav-icon1.open span:nth-of-type(2) {
+  top: 8px;
+  opacity: 0;
+  left: -30px;
+}
+
+.nav-icon1.open span:nth-of-type(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+.nav-icon1 span:nth-of-type(2) {
+  top: 8px;
+}
+
+.nav-icon1 span:nth-of-type(3) {
+  top: 16px;
+}
+
+.nav-icon1:hover span:nth-of-type(3) {
+  top: 19px;
+}
+/* End Left Cross bar animation */
+
+/* Start Header Navigation design */
+.my-navbar {
+  padding: 0px;
+  background-color: cadetblue;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.16);
+}
+
+.text-gray-600{
+  color: white;
+}
+
+/* Logo */
+.nav-link .img-profile {
+  width: 50px;
+}
+
+/* Notification numbers */
+.badge-counter {
+  position: absolute;
+  transform: scale(.7);
+  transform-origin: top right;
+  right: 6px;
+  margin-top: 1px;
+}
+/* End Header Navigation design */
+
+/* Start Page content */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+/* End Page content */
+
+/* Start Footer */
+footer.footer {
+  padding: 1rem .857rem;
+  /* left to right */
+  direction: ltr; 
+  background-color: #fff;
+}
+
+footer.footer ul {
+  margin: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0px 7px;
+}
+
+.text-info:hover {
+  color: #00AEEF !important;
+}
+
+/* footer */
+.text-muted {
+  color: #6c757d!important;
+  font-size: 14px;
+}
+
+/* End Footer */

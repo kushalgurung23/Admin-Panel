@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport for website responsiveness in mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+  <title>Cloudhub Pvt. Ltd.</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+  
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+<!--- Script Source Files -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+
+<script src="https://unpkg.com/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<!-- End of Script Source Files -->
+
+</head>
+<body>
+  <!-- Wrapper acts a row for columns -->
+  <div id="wrapper">
+    <!-- Overlay class is used to make text readable on similar color background -->
+    <div class="overlay">
+    </div>
+    <!-- Start Sidebar Wrapper-->
+    <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
+      <div class="simplebar-content" style="padding: 0px;">
+        <a class="sidebar-brand" href="index.html">
+          <span class="align-middle">Cloudhub Design</span>
+        </a>
+        <ul class="navbar-nav align-self-stretch">
+          <li class="sidebar-header">
+            Pages
+          </li>
+          <li class=""> 
+            <a class="nav-link text-left active"  role="button" 
+            aria-haspopup="true" aria-expanded="false" href="index.html">
+              <i class="fas fa-home ml-1 mr-2"></i> Dashboard 
+            </a>
+          </li>
+                  
+          <li class=""> 
+            <a class="nav-link text-left"  role="button" href="productAdd.html">
+              <i class="fas fa-cart-plus ml-1 mr-2"></i> Add Products 
+            </a>
+          </li>
+
+          <li class=""> 
+            <a class="nav-link text-left"  role="button" href="profile.html">
+              <i class="fas fa-user-circle ml-1 mr-2"></i> Profile 
+            </a>
+          </li>
+
+          <li class=""> 
+            <a class="nav-link text-left"  role="button">
+              <i class="fas fa-users ml-1 mr-2"></i>  Our Customers 
+            </a>
+          </li>
+
+          <li class=""> 
+            <a class="nav-link text-left"  role="button">
+              <i class="fas fa-file-invoice ml-1 mr-2"></i>  Invoice 
+            </a>
+          </li>
+
+          <li class=""> 
+            <a class="nav-link text-left"  role="button" href="registration.html">
+              <i class="fas fa-user-plus ml-1 mr-2"></i>  Register new admin 
+            </a>
+          </li>
+
+          <li class=""> 
+            <a class="nav-link text-left"  role="button" href="login.html">
+              <i class="fas fa-sign-out-alt ml-1 mr-2"></i> Log Out 
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+         <!-- End Sidebar Wrapper -->
+
+    <!-- Start Page Content -->
+    <div id="page-content-wrapper">
+      <div id="content">
+        <div class="container-fluid p-0 px-lg-0 px-md-0">
+          <!-- Top bar-->
+          <nav class="navbar navbar-expand navbar-light my-navbar">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <div type="button" id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <!-- Start Top Bar Search -->
+            <form class="d-none d-sm-inline-block form-inline navbar-search">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light" placeholder="search for...">
+                <!-- input-group helps to extend form-control by adding text, buttons or buttons group on either side of textual inputs. appends = left, prepend = right -->
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Start Top NavBar -->
+
+            <ul class="navbar-nav ml-auto">
+
+              <!-- Nav item - search dropdown (Visible only xs) -->
+              <li class="nav-item dropdown d-sm-none">
+
+                <!-- Dropdown messages -->
+                <div class="dropdown-menu dropdown-menu-right p-3">
+                  <!-- form-inline is built-in support for navbar which is used for form controls and actions. w-100 makes the breaks responsive. -->
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="search for...">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <!-- Nav Item alerts -->
+              <li class="nav-item">
+                <a class="nav-link" href="#" role="button">
+                  <!-- fa-fw used for width -->
+                  <i class="fas fa-bell fa-fw"></i>
+                  <span class="badge badge-danger badge-counter">
+                    3+
+                  </span>
+                </a>
+              </li>
+              <!-- Right Logo -->
+              <li class="nav-item">
+                <a class="nav-link" href="#" role = "button">
+                  <i class="fas fa-envelope"></i>
+                  <!-- Counter message -->
+                  <span class="badge badge-danger badge-counter">
+                    7
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" href="#">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                    Kushal Gurung
+                  </span>
+                  <img class="img-profile rounded-circle" src="images/cloudhubNav.png">
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Top Navbar -->
+
+          <!-- Begin Page Content -->
+
+          <div class="container-fluid px-lg-4">
+            <div class="row">
+
+              <div class="col-md-12 mt-lg-4 mt-4">
+                <!-- Left Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                  <h1 class="h3 mb-0 text-gray-800">Admin Dashboard</h1>
+                  <a href="" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                    <i class="fas fa-download fas-sm text-white-50 mr-2"></i>Generate Report
+                  </a>
+                </div>
+              </div>
+
+              <!-- Four Cards -->
+              <div class="col-md-12">
+                <div class="row">
+                  <!-- 1st -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title mb-4">
+                          Sales
+                        </h5>
+                        <h1 class="display-5 mt-1 mb-3">
+                          21.45 %
+                        </h1>
+                        <div class="mb-1">
+                          <span class="text-warning">
+                            <!-- material design icons -->
+                            <i class="mdi mdi-arrow-bottom-right"></i>464 items
+                          </span>
+                          <span class="text-muted-head"> sold in last 10 days</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- 2nd -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title mb-4">
+                          Profit
+                        </h5>
+                        <h1 class="display-5 mt-1 mb-3">
+                          35.97 %
+                        </h1>
+                        <div class="mb-1">
+                          <span class="text-warning">
+                            <!-- material design icons -->
+                            <i class="mdi mdi-arrow-bottom-right"></i>Rs. 1,25,805.55
+                          </span>
+                          <span class="text-muted-head"> earned in last 10 days</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3rd -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title mb-4">
+                          Customers
+                        </h5>
+                        <h1 class="display-5 mt-1 mb-3">
+                          12.45 %
+                        </h1>
+                        <div class="mb-1">
+                          <span class="text-warning">
+                            <!-- material design icons -->
+                            <i class="mdi mdi-arrow-bottom-right"></i>270
+                          </span>
+                          <span class="text-muted-head">new customers in last 10 days</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4th -->
+                  <div class="col-sm-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title mb-4">
+                          Net Worth
+                        </h5>
+                        <h1 class="display-5 mt-1 mb-3">
+                          0.34 %
+                        </h1>
+                        <div class="mb-1">
+                          <span class="text-muted-head">Increased by </span>
+                          <span class="text-warning">
+                            <!-- material design icons -->
+                            <i class="mdi mdi-arrow-bottom-right"></i>Rs. 3,40,890.78
+                          </span>
+                          <span class="text-muted-head"> in last 10 days </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div> 
+              <!-- End of Four cards -->
+
+            </div>
+          </div>
+          <!-- End from Admin Dashboard to four cards -->
+          
+          <!-- Start Main body Card -->
+          <div class="col-md-12 mt-4">
+            <div class="card">
+
+              <!-- Our Products Row -->
+              <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                  <div>
+                    <h4 class="card-title">
+                      Our Products
+                    </h4>
+                    <h6 class="card-subtitle">
+                      Overview Of Current Available Items
+                    </h6>
+                  </div>
+                  <!-- ml-auto helps to put tags on the left side -->
+                  <div class="ml-auto">
+                    <!-- description list -->
+                    <div class="dl">
+                      <select class="custom-select">
+                        <option value="0" selected>Monthly</option>
+                        <option value="1">Weekly</option>
+                        <option value="2">Daily</option>
+                        <option value="3">Yearly</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Start Table responsive -->
+            <div class="table-responsive">
+              <table class="table v-middle">
+                <!-- thead tag is used to group header content in an HTML table. -->
+                <thead>
+                  <!-- tr = row of cells in table -->
+                  <tr class="bg-light">
+                    <th class="border-top-0">Product</th>
+                    <th class="border-top-0">Name</th>
+                    <th class="border-top-0">Company</th>
+                    <th class="border-top-0">Sales per day</th>
+                    <th class="border-top-0">Stock</th>
+                    <th class="border-top-0">Customer Ratings</th>
+                    <th class="border-top-0">Price</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- First Product -->
+                  <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product1.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Nike Joyride Run Flyknit
+                    </td>
+
+                    <td class="product-color">
+                      Nike
+                    </td>
+
+                    <td class="product-color">
+                      16
+                    </td>
+
+                    <td class="product-color">
+                      100 items
+                    </td>
+
+                    <td class="product-color">
+                      4.5
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$49</h5>
+                    </td>
+                    
+                  </tr>
+
+                  <!-- Second Product -->
+                  <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product2.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Nike Joyride NSW
+                    </td>
+
+                    <td class="product-color">
+                      Nike
+                    </td>
+
+                    <td class="product-color">
+                      6
+                    </td>
+
+                    <td class="product-color">
+                      56 items
+                    </td>
+
+                    <td class="product-color">
+                      4.2
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$40</h5>
+                    </td>
+                    
+                  </tr>
+
+                  <!-- Third Product -->
+                  <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product3.jpg">
+                        </div>
+                        <div>      
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Nike Epic React Flyknit
+                    </td>
+
+                    <td class="product-color">
+                      Nike
+                    </td>
+
+                    <td class="product-color">
+                      20
+                    </td>
+
+                    <td class="product-color">
+                      22 items
+                    </td>
+
+                    <td class="product-color">
+                      4.8
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$39</h5>
+                    </td>
+                    
+                  </tr>
+
+                  <!-- Fourth Product -->
+                  <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product4.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Adidas NMD_R1 Tie-Dye
+                    </td>
+
+                    <td class="product-color">
+                      Adidas
+                    </td>
+
+                    <td class="product-color">
+                      17
+                    </td>
+
+                    <td class="product-color">
+                      43 items
+                    </td>
+
+                    <td class="product-color">
+                      4.4
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$30</h5>
+                    </td>
+                    
+                  </tr>
+
+                   <!-- Fifth Product -->
+                   <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product5.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Star Wars Adidas
+                    </td>
+
+                    <td class="product-color">
+                      Adidas
+                    </td>
+
+                    <td class="product-color">
+                      13
+                    </td>
+
+                    <td class="product-color">
+                      20 items
+                    </td>
+
+                    <td class="product-color">
+                      4.2
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$32</h5>
+                    </td>
+                    
+                  </tr>
+
+                   <!-- Sixth Product -->
+                   <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product6.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Adidas NMD_R1
+                    </td>
+
+                    <td class="product-color">
+                      Adidas
+                    </td>
+
+                    <td class="product-color">
+                      24
+                    </td>
+
+                    <td class="product-color">
+                      20 items
+                    </td>
+
+                    <td class="product-color">
+                      5.0
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$30</h5>
+                    </td>
+                    
+                  </tr>
+
+                   <!-- Seventh Product -->
+                   <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product7.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Fila Axilus 2 Energized
+                    </td>
+
+                    <td class="product-color">
+                      Fila
+                    </td>
+
+                    <td class="product-color">
+                      10
+                    </td>
+
+                    <td class="product-color">
+                      15 items
+                    </td>
+
+                    <td class="product-color">
+                      4.5
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$35</h5>
+                    </td>
+                    
+                  </tr>
+
+                   <!-- Eight Product -->
+                   <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product8.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Fila Ray Tracer
+                    </td>
+
+                    <td class="product-color">
+                      Fila
+                    </td>
+
+                    <td class="product-color">
+                      22
+                    </td>
+
+                    <td class="product-color">
+                      10 items
+                    </td>
+
+                    <td class="product-color">
+                      4.8
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$38</h5>
+                    </td>
+                    
+                  </tr>
+
+                   <!-- Ninth Product -->
+                   <tr>
+                    <!-- td = standard data cell -->
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="m-r-10 product-image">
+                          <img src="./images/product9.jpg">
+                        </div>
+                        <div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="product-color">
+                      Fila Disruptor 2 Premium
+                    </td>
+
+                    <td class="product-color">
+                      Fila
+                    </td>
+
+                    <td class="product-color">
+                      13
+                    </td>
+
+                    <td class="product-color">
+                      16 items
+                    </td>
+
+                    <td class="product-color">
+                      4.7
+                    </td>
+
+                    <td>
+                      <h5 class="m-b-0">$30</h5>
+                    </td>
+                    
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- End Table responsive -->
+
+          </div>
+          <!-- End card -->
+
+          </div>
+          <!-- End col division card -->
+
+        </div>
+        <!-- fluid-container -->
+
+        <!-- Start footer -->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-6 text-left">
+                <p class="mb-0">
+                  <a href="#" class="text-muted">
+                    <strong>&copy; 2020 Cloudhub Pvt. Ltd. </strong>
+                  </a>
+                </p>
+              </div>
+              <div class="col-6 text-right">
+                <ul class="list-inline">
+
+                  <!-- Footer links -->
+                  <li class="footer-item">
+                    <a href="#" class="text-muted">
+                      Support
+                    </a>
+                  </li>
+
+                  <li class="footer-item">
+                    <a href="#" class="text-muted">
+                      Help center
+                    </a>
+                  </li>
+
+                  <li class="footer-item">
+                    <a href="#" class="text-muted">
+                      Privacy
+                    </a>
+                  </li>
+
+                  <li class="footer-item">
+                    <a href="#" class="text-muted">
+                      Terms and Conditions
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- End footer -->
+
+      </div>
+      <!-- content -->
+
+    </div>
+    <!-- End Page Content wrapper -->
+
+  </div>
+  <!-- Wrapper div end -->
+
+  <!-- Java Script -->
+  <!-- When side toggle icon is clicked, a function will be called that will toggle the sidebar, and the main page content as written in js language below. -->
+
+  <script>
+ 
+    $('#bar').click(function(){
+      $(this).toggleClass('open');
+      $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled' );
+    
+    });
+      </script>
+
+  <!-- End Java Script -->
+</body>
+</html>
